@@ -1,37 +1,37 @@
-package com.example.empower  // Replace with your package name
-
+package com.example.empower
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.empower.R
 
-class MainActivity2 : AppCompatActivity() {  // Updated class name
-
-    private lateinit var dropdownSpinner: Spinner
-
-    private val items = listOf("Item 1", "Item 2", "Item 3", "Item 4")
-
+class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)  // Updated layout reference
+        setContentView(R.layout.activity_main2)
 
-        dropdownSpinner = findViewById(R.id.dropdown_spinner)
+        // Find the buttons by their IDs
+        val button1 = findViewById<Button>(R.id.button1)
+        val button2 = findViewById<Button>(R.id.button2)
+        val button3 = findViewById<Button>(R.id.button3)
+        val button4 = findViewById<Button>(R.id.button4)
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items)
-        dropdownSpinner.adapter = adapter
+        // Set click listeners for each button
+        button1.setOnClickListener {
+            // Handle button 1 click here
+            // Example:
+            // Toast.makeText(this, "Button 1 clicked!", Toast.LENGTH_SHORT).show()
+        }
 
-        dropdownSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                val selected = items[position]
-                Toast.makeText(this@MainActivity2, "Selected item: $selected", Toast.LENGTH_SHORT).show()
-            }
+        button2.setOnClickListener {
+            // Handle button 2 click here
+        }
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                // Handle deselection if needed
-            }
+        button3.setOnClickListener {
+            // Handle button 3 click here
+        }
+
+        button4.setOnClickListener {
+            // Handle button 4 click here
         }
     }
 }
