@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity3">
 
   <TextView
       android:id="@+id/heading_text_view"
@@ -18,11 +18,14 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="horizontal"
-      android:weightSum="2"> <TextView
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="1" android:text="Last Drink/Drugs Taken"
-      android:textStyle="bold" />
+      android:weightSum="2">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Last Drink/Drugs Taken"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="0dp"
@@ -37,10 +40,14 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="horizontal"
-      android:weightSum="2"> <EditText
-      android:id="@+id/last_use_edit_text"
-      android:layout_width="0dp" android:layout_height="wrap_content"
-      android:layout_weight="1" android:hint="Enter drink/drugs" />
+      android:weightSum="2">
+
+    <EditText
+        android:id="@+id/last_use_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Enter drink/drugs" />
 
     <EditText
         android:id="@+id/diagnosis_edit_text"
@@ -50,5 +57,33 @@
         android:hint="Enter Diagnosis" />
 
   </LinearLayout>
+
+  <EditText
+      android:id="@+id/editTextText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:inputType="text"
+      android:text="Name" />
+
+  <EditText
+      android:id="@+id/editTextTextEmailAddress"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:inputType="textEmailAddress" />
+
+  <EditText
+      android:id="@+id/editTextNumber"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:inputType="number" />
+
+  <CheckBox
+      android:id="@+id/checkBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="CheckBox" />
 
 </LinearLayout>
